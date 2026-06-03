@@ -48,7 +48,7 @@ const ComplianceTable = ({
               return (
                 <tr key={idx}>
                   <td
-                    className={`border border-[#d0d0d0] px-4 sm:px-5 py-4 bw-sb text-[13px] sm:text-[17px] lg:text-[20px] uppercase text-white leading-[1.4] ${bgColor}`}
+                    className={`border border-[#d0d0d0] px-4 sm:px-5 py-4 bw-sb text-[12px] sm:text-[17px] lg:text-[20px] uppercase text-white leading-[1.4] ${bgColor}`}
                   >
                     {row.category}
                   </td>
@@ -59,7 +59,7 @@ const ComplianceTable = ({
                         alt=""
                         className="shrink-0 w-[36px] h-[36px] sm:w-[48px] sm:h-[48px] lg:w-[56px] lg:h-[56px]"
                       />
-                      <p className="bw-sb text-[11px] sm:text-[14px] lg:text-[16px] uppercase text-[#4a4a4a] leading-[1.4]">
+                      <p className="bw-sb text-[11px]! sm:text-[14px] lg:text-[16px] uppercase text-[#4a4a4a] leading-[26px]! sm:leading-[1.4]">
                         {row.col1}
                       </p>
                     </div>
@@ -71,7 +71,7 @@ const ComplianceTable = ({
                         alt=""
                         className="shrink-0 w-[36px] h-[36px] sm:w-[48px] sm:h-[48px] lg:w-[56px] lg:h-[56px]"
                       />
-                      <p className="bw-sb text-[11px] sm:text-[14px] lg:text-[16px] uppercase text-[#4a4a4a] leading-[1.4]">
+                      <p className="bw-sb text-[11px]! sm:text-[14px] lg:text-[16px] uppercase text-[#4a4a4a] leading-[26px]! sm:leading-[1.4]">
                         {row.col2}
                       </p>
                     </div>

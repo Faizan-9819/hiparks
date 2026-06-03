@@ -87,19 +87,37 @@ function TableAsImage({ src, alt }) {
 //     </div>
 //   );
 // }
+// function SiteSelectionTable() {
+//   return (
+//     <div className="w-full border border-black py-[28px]">
+//       <h3 className="text-center w-full uppercase pb-[15px] px-5 text-[24px] font-semibold md:text-[28px]">
+//         Grade A Warehouse Site Selection Strategy
+//       </h3>
+
+//       {/* Scroll wrapper */}
+//       <div className="w-full px-[20px] overflow-x-auto">
+//         <img
+//           src="/white_paper/grade-a/tableimg1siteselection.png"
+//           alt="Grade A Warehouse Site Selection Strategy"
+//           className="w-full h-auto"
+//         />
+//       </div>
+//     </div>
+//   );
+// }
+
 function SiteSelectionTable() {
   return (
-    <div className="w-full border border-black pt-7">
-      <h3 className="text-center w-full uppercase pb-5 px-5 text-[24px] font-semibold md:text-[28px]">
+    <div className="w-full border border-black py-[28px]">
+      <h3 className="text-center w-full uppercase pb-[15px] px-5 text-[24px] font-semibold md:text-[28px]">
         Grade A Warehouse Site Selection Strategy
       </h3>
 
-      {/* Scroll wrapper */}
-      <div className="w-full overflow-x-auto">
+      <div className="w-full px-[20px] overflow-x-auto">
         <img
           src="/white_paper/grade-a/tableimg1siteselection.png"
           alt="Grade A Warehouse Site Selection Strategy"
-          className="min-w-[640px] h-auto"
+          className="h-[500px] w-auto max-w-none  md:min-w-0 md:w-full"
         />
       </div>
     </div>
@@ -229,13 +247,13 @@ function EconomicsTable() {
       <table className="w-full min-w-[640px] border-collapse">
         <thead>
           <tr>
-            <th className="bw-sb text-[18px] sm:text-[24px] text-center text-white px-[16px] py-[20px] border border-[#e0e0e0] bg-[#8F53A1] w-[33%]">
+            <th className="bw-sb text-[14px] sm:text-[24px] text-center text-white px-[16px] py-[20px] border border-l-0 border-[#e0e0e0] bg-[#8F53A1] w-[33%]">
               FEATURE / METRIC
             </th>
-            <th className="bw-sb text-[18px] sm:text-[24px] text-center px-[16px] py-[20px] border border-[#e0e0e0] bg-[#F47920] text-white w-[33%]">
+            <th className="bw-sb text-[14px] sm:text-[24px] text-center px-[16px] py-[20px] border border-[#e0e0e0] bg-[#F47920] text-white w-[33%]">
               GRADE A INDUSTRIAL <br /> &amp; SUSTAINABLE LOGISTICS PARKS
             </th>
-            <th className="bw-sb text-[18px] sm:text-[24px] text-center px-[16px] py-[20px] border border-[#e0e0e0] bg-[#0DB14B] text-white w-[33%]">
+            <th className="bw-sb text-[14px] sm:text-[24px] text-center px-[16px] py-[20px] border border-[#e0e0e0] bg-[#0DB14B] text-white w-[33%]">
               GRADE B/C LEGACY <br /> &amp; INCREMENTAL WAREHOUSING
             </th>
           </tr>
@@ -243,18 +261,28 @@ function EconomicsTable() {
         <tbody>
           {rows.map((row, i) => (
             <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-[#ffffff]"}>
-              <td className="bw-sb flex items-center text-[13px] sm:text-[15px] px-[16px] py-[18px] border border-[#e0e0e0] text-[#1a1a1a]">
+              {/* <td className="bw-sb flex items-center text-[13px] sm:text-[15px] px-[16px] py-[18px] border border-b-0 border-r-0 border-l-0 border-[#e0e0e0] text-[#1a1a1a]">
                 <img
                   src={row.src}
                   alt={row.metric}
                   className="shrink-0 w-[36px] h-[36px] sm:w-[48px] sm:h-[48px] lg:w-[56px] lg:h-[56px]"
                 />
                 <span className="ms-5 text-[#4A4A4A]">{row.metric}</span>
+              </td> */}
+              <td className="bw-sb text-[12px] sm:text-[15px] px-[16px] py-[18px] border border-b-0 border-r-0 border-l-0 border-[#e0e0e0] text-[#1a1a1a]">
+                <div className="flex items-center">
+                  <img
+                    src={row.src}
+                    alt={row.metric}
+                    className="shrink-0 w-[36px] h-[36px] sm:w-[48px] sm:h-[48px] lg:w-[56px] lg:h-[56px]"
+                  />
+                  <span className="ms-5 text-[#4A4A4A]">{row.metric}</span>
+                </div>
               </td>
-              <td className="bw-r text-[13px] font-semibold! text-[#4A4A4A] sm:text-[18px] px-[16px] py-[18px] border border-[#e0e0e0] text-[#1a1a1a]">
+              <td className="bw-r text-[11px] font-semibold! uppercase text-[#4A4A4A] sm:text-[18px] px-[16px] py-[18px] border border-[#e0e0e0] text-[#1a1a1a]">
                 {row.gradeA}
               </td>
-              <td className="bw-r text-[13px] sm:text-[18px] font-semibold! text-[#4A4A4A] px-[16px] py-[18px] border border-[#e0e0e0] text-[#1a1a1a]">
+              <td className="bw-r text-[11px] sm:text-[18px] uppercase font-semibold! text-[#4A4A4A] px-[16px] py-[18px] border border-[#e0e0e0] text-[#1a1a1a]">
                 {row.gradeBc}
               </td>
             </tr>
@@ -366,9 +394,9 @@ function renderSection(section, index) {
     return (
       <div key={index} className="w-full wpcontentdiv pt-7 gbook">
         <div
-          className={`fix border border-[#D0D0D0]  py-7! ${section.paddingTop || ""} ${section.paddingBottom || ""}`}
+          className={`fix border border-[#D0D0D0]  pt-7! ${section.paddingTop || ""} ${section.paddingBottom || ""}`}
         >
-          <h3 className="text-center font-semibold! pb-2 text-24px md:text-28px">
+          <h3 className="text-center font-semibold! pb-2 text-[15px]! md:text-[28px]">
             WAREHOUSING ECONOMICS & LIFECYCLE COSTING: <br /> GRADE A VS GRADE
             B/C WAREHOUSING
           </h3>
