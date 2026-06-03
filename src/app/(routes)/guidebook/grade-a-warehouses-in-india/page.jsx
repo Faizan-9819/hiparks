@@ -89,7 +89,7 @@ function TableAsImage({ src, alt }) {
 // }
 function SiteSelectionTable() {
   return (
-    <div className="w-full border border-black py-7">
+    <div className="w-full border border-black pt-7">
       <h3 className="text-center w-full uppercase pb-5 px-5 text-[24px] font-semibold md:text-[28px]">
         Grade A Warehouse Site Selection Strategy
       </h3>
