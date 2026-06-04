@@ -10,6 +10,7 @@ import sections4 from "./data4";
 import referencesBoxes from "./refdata";
 
 export const metadata = {
+  guidebook_date: "2025-05-01",
   title:
     "Grade A Warehouses in India: The Definitive Guide | Horizon Industrial Parks",
   description:

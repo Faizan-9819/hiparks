@@ -5,6 +5,7 @@ import flexSections from "./data";
 import White_Paper_sec12 from "@/components/whitepaper-globalf/White_Paper_sec12";
 import referencesBoxes from "./refdata";
 export const metadata = {
+  guidebook_date: "2025-03-01",
   title:
     "Built-to-Suit Warehouses and Factories: Tailored Solutions for Modern Industry | Horizon Industrial Parks",
   description:
