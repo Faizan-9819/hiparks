@@ -59,7 +59,7 @@ const ComplianceTable = ({
                         alt=""
                         className="shrink-0 w-[36px] h-[36px] sm:w-[48px] sm:h-[48px] lg:w-[56px] lg:h-[56px]"
                       />
-                      <p className="bw-sb text-[11px]! sm:text-[14px] lg:text-[16px] uppercase text-[#4a4a4a] leading-[16px]! sm:leading-[1.4]">
+                      <p className="bw-sb text-[11px]! sm:text-[14px] lg:text-[18px]! uppercase text-[#4a4a4a] leading-[16px]! sm:leading-[1.4]!">
                         {row.col1}
                       </p>
                     </div>
@@ -71,7 +71,7 @@ const ComplianceTable = ({
                         alt=""
                         className="shrink-0 w-[36px] h-[36px] sm:w-[48px] sm:h-[48px] lg:w-[56px] lg:h-[56px]"
                       />
-                      <p className="bw-sb text-[11px]! sm:text-[14px] lg:text-[16px] uppercase text-[#4a4a4a] leading-[16px]! sm:leading-[1.4]">
+                      <p className="bw-sb text-[11px]! sm:text-[14px] lg:text-[18px]! uppercase text-[#4a4a4a] leading-[16px]! sm:leading-[1.4]!">
                         {row.col2}
                       </p>
                     </div>

@@ -76,19 +76,19 @@ const sections3 = [
     _type: "photo-grid-2x2",
     photos: [
       {
-        src: "/white_paper/grade-a/social1.webp",
+        src: "/white_paper/grade-a/social1.jpg",
         caption: "Horizon Industrial Park - Chakan II",
       },
       {
-        src: "/white_paper/grade-a/social2.webp",
+        src: "/white_paper/grade-a/social2.jpg",
         caption: "Horizon Industrial Park - Hosur",
       },
       {
-        src: "/white_paper/grade-a/social3.webp",
+        src: "/white_paper/grade-a/social3.jpg",
         caption: "Horizon Industrial Park - Farukhnagar I",
       },
       {
-        src: "/white_paper/grade-a/social4.webp",
+        src: "/white_paper/grade-a/social4.jpg",
         caption: "Horizon Industrial Park - Kothur",
       },
     ],

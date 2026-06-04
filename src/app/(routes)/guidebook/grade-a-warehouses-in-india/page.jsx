@@ -17,7 +17,7 @@ export const metadata = {
 };
 
 // Renders a 2x2 captioned photo grid matching the Figma ESG layout
-function PhotoGrid2x2({ photos }) {
+function PhotoGrid2x2({ photos, captions }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-[10px] w-full">
       {photos.map((photo, i) => (
@@ -30,13 +30,14 @@ function PhotoGrid2x2({ photos }) {
             alt={photo.caption || ""}
             className="absolute inset-0 w-full h-full object-cover"
           />
-          {/* {photo.caption && (
-            <div className="absolute bottom-0 left-0 right-0 h-[60px] bg-[rgba(0,0,0,0.3)] flex items-center justify-center px-[10px]">
+          {photo.caption && (
+            <div className="absolute bottom-0 left-0 right-0 h-[60px] bg-[rgba(0,0,0,0.25)] backdrop-blur-md flex items-center justify-center px-[10px]">
+              {/* // <div className="absolute bottom-0 left-0 right-0 h-[60px] bg-[rgba(0,0,0,0.8)] flex items-center justify-center px-[10px]"> */}
               <p className="bw-m text-white text-[16px] sm:text-[18px] leading-[24px] text-center">
                 {photo.caption}
               </p>
             </div>
-          )} */}
+          )}
         </div>
       ))}
     </div>
@@ -44,14 +45,29 @@ function PhotoGrid2x2({ photos }) {
 }
 
 // Renders a full-width captioned image (Safety Week etc.)
+// function CaptionedImage({ src, alt, caption }) {
+//   return (
+//     <div className="relative w-full h-auto aspect-video overflow-hidden bg-[#8e8e8e]">
+//       <img
+//         src={src}
+//         alt={alt || ""}
+//         className="absolute inset-0 w-full h-full object-cover"
+//       />
+//       {caption && (
+//         <div className="absolute bottom-0 left-0 right-0 h-[60px] border border-[rgba(0,0,0,0.10)] bg-[rgba(0,0,0,0.03)] backdrop-blur-[60px] flex items-center justify-center px-[10px]">
+//           <p className="bw-m text-white text-[16px] sm:text-[20px] leading-[32px] text-center">
+//             {caption}
+//           </p>
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
 function CaptionedImage({ src, alt, caption }) {
   return (
-    <div className="relative w-full h-auto aspect-video overflow-hidden bg-[#8e8e8e]">
-      <img
-        src={src}
-        alt={alt || ""}
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+    <div className="relative w-full overflow-hidden bg-[#8e8e8e]">
+      <img src={src} alt={alt || ""} className="block w-full h-auto" />
+
       {caption && (
         <div className="absolute bottom-0 left-0 right-0 h-[60px] border border-[rgba(0,0,0,0.10)] bg-[rgba(0,0,0,0.03)] backdrop-blur-[60px] flex items-center justify-center px-[10px]">
           <p className="bw-m text-white text-[16px] sm:text-[20px] leading-[32px] text-center">
@@ -62,7 +78,6 @@ function CaptionedImage({ src, alt, caption }) {
     </div>
   );
 }
-
 // Renders a complex table as a horizontally-scrollable image
 function TableAsImage({ src, alt }) {
   return (
@@ -106,6 +121,23 @@ function TableAsImage({ src, alt }) {
 //   );
 // }
 
+// function SiteSelectionTable() {
+//   return (
+//     <div className="w-full border border-black py-[28px]">
+//       <h3 className="text-center w-full uppercase pb-[15px] px-5 text-[24px] font-semibold md:text-[28px]">
+//         Grade A Warehouse Site Selection Strategy
+//       </h3>
+
+//       <div className="w-full px-[20px] overflow-x-auto">
+//         <img
+//           src="/white_paper/grade-a/tableimg1siteselection.png"
+//           alt="Grade A Warehouse Site Selection Strategy"
+//           className="h-[500px] w-auto max-w-none  md:min-w-0 md:w-full"
+//         />
+//       </div>
+//     </div>
+//   );
+// }
 function SiteSelectionTable() {
   return (
     <div className="w-full border border-black py-[28px]">
@@ -117,7 +149,7 @@ function SiteSelectionTable() {
         <img
           src="/white_paper/grade-a/tableimg1siteselection.png"
           alt="Grade A Warehouse Site Selection Strategy"
-          className="h-[500px] w-auto max-w-none  md:min-w-0 md:w-full"
+          className="block min-w-[900px] h-auto md:min-w-0 md:w-full"
         />
       </div>
     </div>
@@ -381,7 +413,7 @@ function renderSection(section, index) {
         className={`w-full wpcontentdiv gbook ${section.paddingTop || ""} ${section.paddingBottom || ""}`}
       >
         <div className="fix">
-          <PhotoGrid2x2 photos={section.photos} />
+          <PhotoGrid2x2 photos={section.photos} captions={section.captions} />
         </div>
       </div>
     );
