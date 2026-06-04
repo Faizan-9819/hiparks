@@ -65,11 +65,11 @@ function PhotoGrid2x2({ photos, captions }) {
 // }
 function CaptionedImage({ src, alt, caption }) {
   return (
-    <div className="relative w-full overflow-hidden bg-[#8e8e8e]">
+    <div className="relative w-full overflow-hidden ">
       <img src={src} alt={alt || ""} className="block w-full h-auto" />
 
       {caption && (
-        <div className="absolute bottom-0 left-0 right-0 h-[60px] border border-[rgba(0,0,0,0.10)] bg-[rgba(0,0,0,0.03)] backdrop-blur-[60px] flex items-center justify-center px-[10px]">
+        <div className="absolute bottom-0 left-0 right-0 h-[40px] sm:h-[60px] border border-[rgba(0,0,0,0.10)] bg-[rgba(0,0,0,0.03)] backdrop-blur-[60px] flex items-center justify-center px-[10px]">
           <p className="bw-m text-white text-[16px] sm:text-[20px] leading-[32px] text-center">
             {caption}
           </p>
@@ -79,14 +79,28 @@ function CaptionedImage({ src, alt, caption }) {
   );
 }
 // Renders a complex table as a horizontally-scrollable image
+// function TableAsImage({ src, alt }) {
+//   return (
+//     <div className="w-full overflow-x-auto">
+//       <img
+//         src={src}
+//         alt={alt || ""}
+//         className="sm:w-full h-[500px] sm:h-auto sm:min-w-[640px]"
+//       />
+//     </div>
+//   );
+// }
 function TableAsImage({ src, alt }) {
   return (
     <div className="w-full overflow-x-auto">
-      <img src={src} alt={alt || ""} className="w-full h-auto min-w-[640px]" />
+      <img
+        src={src}
+        alt={alt || ""}
+        className="block min-w-[1200px] h-auto md:min-w-0 md:w-full"
+      />
     </div>
   );
 }
-
 // Renders the Site Selection Strategy table as a horizontally-scrollable image
 // function SiteSelectionTable() {
 //   return (
@@ -147,7 +161,7 @@ function SiteSelectionTable() {
 
       <div className="w-full px-[20px] overflow-x-auto">
         <img
-          src="/white_paper/grade-a/tableimg1siteselection.png"
+          src="/white_paper/grade-a/tableimg1siteselection.webp"
           alt="Grade A Warehouse Site Selection Strategy"
           className="block min-w-[900px] h-auto md:min-w-0 md:w-full"
         />

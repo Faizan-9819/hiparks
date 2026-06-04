@@ -347,7 +347,7 @@ operational costs over the asset lifecycle.</p>
   },
   {
     _type: "table-as-image",
-    src: "/white_paper/grade-a/tableasimg2wms.png",
+    src: "/white_paper/grade-a/tableasimg2wms.webp",
     alt: "Core WMS Capabilities",
     paddingTop: "pt-0",
   },
