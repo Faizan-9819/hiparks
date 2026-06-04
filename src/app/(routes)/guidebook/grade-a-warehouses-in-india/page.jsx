@@ -126,12 +126,27 @@ function SiteSelectionTable() {
 // ESG certification logos row (ISO 14001, ISO 50001, IGBC, LEED)
 function ESGCertLogos() {
   return (
+    // <div className="grid grid-cols-2 sm:grid-cols-4 gap-[10px]">
+    //   {[
+    //     // { label: "ISO 14001", sub: "Environmental Management" },
+    //     // { label: "ISO 50001", sub: "Energy Management" },
+    //     // { label: "IGBC", sub: "Green Building Council" },
+    //     // { label: "LEED", sub: "Green Building Certification" },
+    //     { img: "/white_paper/grade-a/esgc1.png" },
+    //     { img: "/white_paper/grade-a/esgc2.png" },
+    //     { img: "/white_paper/grade-a/esgc3.png" },
+    //     { img: "/white_paper/grade-a/esgc4.png" },
+    //   ].map((cert, i) => (
+    //     <div
+    //       key={i}
+    //       className="border border-[#c7c7c7] flex flex-col items-center justify-center h-[140px] sm:h-[280px] gap-2 px-4"
+    //     >
+    //       <img src={cert.img} alt="" />
+    //     </div>
+    //   ))}
+    // </div>
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-[10px]">
       {[
-        // { label: "ISO 14001", sub: "Environmental Management" },
-        // { label: "ISO 50001", sub: "Energy Management" },
-        // { label: "IGBC", sub: "Green Building Council" },
-        // { label: "LEED", sub: "Green Building Certification" },
         { img: "/white_paper/grade-a/esgc1.png" },
         { img: "/white_paper/grade-a/esgc2.png" },
         { img: "/white_paper/grade-a/esgc3.png" },
@@ -139,9 +154,13 @@ function ESGCertLogos() {
       ].map((cert, i) => (
         <div
           key={i}
-          className="border border-[#c7c7c7] flex flex-col items-center justify-center h-[140px] sm:h-[280px] gap-2 px-4"
+          className="border border-[#c7c7c7] flex flex-col items-center justify-center h-[140px] sm:h-[280px] gap-2 px-4 overflow-hidden"
         >
-          <img src={cert.img} alt="" />
+          <img
+            src={cert.img}
+            alt=""
+            className="max-w-full max-h-full object-contain"
+          />
         </div>
       ))}
     </div>
